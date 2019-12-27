@@ -6,6 +6,7 @@
             $('#{{ $attributes['id'] }}').select2({
                 dropdownAutoWidth : true,
                 width: 'auto',
+                allowClear: false,
                 placeholder: "{{ $attributes['placeholder'] ?? 'Selecione' }}",
                 minimumInputLength: 3,
                 ajax: {
