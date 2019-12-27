@@ -1,13 +1,5 @@
 {{ Form::select($name, $values, $selected, $attributes) }}
 
-@push('styles')
-<style>
-    .select2{
-        width: 100% !important;
-    }
-</style>
-@endpush
-
 @push('scripts')
     @isset($select2Attr['server_side'])
         <script>
