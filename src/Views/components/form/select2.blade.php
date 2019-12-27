@@ -1,11 +1,19 @@
 {{ Form::select($name, $values, $selected, $attributes) }}
 
+@push('styles')
+<style>
+    .select2{
+        width: 100% !important;
+    }
+</style>
+@endpush
+
 @push('scripts')
     @isset($select2Attr['server_side'])
         <script>
             $('#{{ $attributes['id'] }}').select2({
                 dropdownAutoWidth : true,
-                width: '100% !important',
+                width: 'auto',
                 allowClear: false,
                 placeholder: "{{ $attributes['placeholder'] ?? 'Selecione' }}",
                 minimumInputLength: 3,
