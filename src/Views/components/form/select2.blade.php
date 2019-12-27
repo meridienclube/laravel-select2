@@ -5,7 +5,7 @@
         <script>
             $('#{{ $attributes['id'] }}').select2({
                 dropdownAutoWidth : true,
-                width: 'auto',
+                width: '100% !important',
                 allowClear: false,
                 placeholder: "{{ $attributes['placeholder'] ?? 'Selecione' }}",
                 minimumInputLength: 3,
