@@ -4,6 +4,8 @@
     @isset($select2Attr['server_side'])
         <script>
             $('#{{ $attributes['id'] }}').select2({
+                dropdownAutoWidth : true,
+                width: 'auto',
                 placeholder: "{{ $attributes['placeholder'] ?? 'Selecione' }}",
                 minimumInputLength: 3,
                 ajax: {
