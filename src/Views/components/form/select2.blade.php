@@ -8,6 +8,7 @@
                 width: 'auto',
                 allowClear: false,
                 placeholder: "{{ $attributes['placeholder'] ?? 'Selecione' }}",
+                required: "{{ $attributes['required'] ?? false }}",
                 minimumInputLength: 3,
                 ajax: {
                     url: "{{ route($select2Attr['server_side']['route'], ['api_token' => auth()->user()->api_token]) }}",
