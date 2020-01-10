@@ -1,11 +1,12 @@
 {{ Form::select($name, $values, $selected, $attributes) }}
 
 @push('scripts')
-    @isset($select2Attr['server_side'])
+
         <script>
+            @isset($select2Attr['server_side'])
             $('#{{ $attributes['id'] }}').select2({
                 dropdownAutoWidth : true,
-                width: 'auto',
+                width: 'resolve',
                 allowClear: false,
                 placeholder: "{{ $attributes['placeholder'] ?? 'Selecione' }}",
                 required: "{{ $attributes['required'] ?? false }}",
@@ -31,6 +32,9 @@
                     }
                 }
             });
+            @else
+            $('#{{ $attributes['id'] }}').select2();
+            @endisset
         </script>
-    @endisset
+
 @endpush
