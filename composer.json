@@ -1,5 +1,6 @@
 {
     "name": "confrariaweb/laravel-select2",
+    "version": "dev-master",
     "description": "Select2",
     "keywords": [
         "select2",
@@ -15,7 +16,7 @@
         }
     ],
     "require": {
-        "laravelcollective/html": "~6.0"
+        "laravelcollective/html": ">=6.0"
     },
     "autoload": {
         "psr-4": {
