@@ -23,10 +23,10 @@
                         data: function (params) {
                             return {
                                 @isset($select2Attr['getValues'])
-                                        @foreach($select2Attr['getValues'] as $k => $v)
+                                    @foreach($select2Attr['getValues'] as $k => $v)
                                         {!! $k . ': $("' . $v . ' option:selected").val(),' !!}
-                                        @endforeach
-                                        @endisset
+                                    @endforeach
+                                @endisset
                                 term: params.term
                             }
                         },
